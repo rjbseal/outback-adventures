@@ -10,27 +10,85 @@
     --dark-sienna: #2B0D0Fff;
 }
 
-
-* {
-    padding: 0;
-    margin: 0;
-}
+* { box-sizing: border-box; }
 
 body {
     font-family: 'Sofia Pro', sans-serif;
     font-weight: 300;
-    font-size: 1rem;                                
+    font-size: 1rem;
+    color: #333;                              
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
 }
+
+/* ==================
+    typeography
+===================== */
 
 h1, h2 {
     margin: 0;
     color: var(--primary-color);
+    line-height: 1.4;
+}
+
+/* navigation */
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    margin-bottom: 1.5em;
 }
 
 p {
     color: var(--secondary-color);
 }
 
-.logo {
+/* button */
+
+.btn {
+    background: var(--sinopia);
+    color: #fff;
+    padding: 0.65em 1.75em;
+    justify-self: flex-start;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* ==================
+    hero area
+===================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 
+    minmax(1em, 2em) minmax(0, 500px) minmax(1em, 2em);
+
+    background-image: url(img/adventure.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+
+    padding: 4em 0;
+}
+
+.hero > * {
+    grid-column: 2 / -2;
+}
+
+.logo,
+.footer-logo {
     max-width: 200px;
 }
