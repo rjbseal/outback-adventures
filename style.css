@@ -1,0 +1,32 @@
+:root {
+    /* --primary-color: #033051; */
+    --primary-color: #033051;
+    --secondary-color: #333;
+    --accent-color: #DBCF42ff;
+    /* CSS HEX */
+    --seal-brown: #5C2513ff;
+    --sinopia: #D1461Bff;
+    --black-shadows: #BEB2B0ff;
+    --dark-sienna: #2B0D0Fff;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;                                
+}
+
+h1, h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--secondary-color);
+}
