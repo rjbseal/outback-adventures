@@ -32,7 +32,33 @@ h1, h2 {
     line-height: 1.4;
 }
 
-/* navigation */
+.title {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    margin-bottom: 1.5em;
+}
+
+p {
+    color: var(--secondary-color);
+}
+
+/* button */
+
+.btn {
+    background: var(--sinopia);
+    color: #fff;
+    padding: 0.45em 1.45em;
+    justify-self: flex-start;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+/* ==================
+    Navigation
+===================== */
 
 
 .header {
@@ -60,38 +86,12 @@ h1, h2 {
     color: var(--sinopia);
 }
 
-.title {
-    font-size: 2.5rem;
-}
-
-.subtitle {
-    margin-bottom: 1.5em;
-}
-
-p {
-    color: var(--secondary-color);
-}
-
-/* button */
-
-.btn {
-    background: var(--sinopia);
-    color: #fff;
-    padding: 0.65em 1.75em;
-    justify-self: flex-start;
-    text-decoration: none;
-    font-weight: 700;
-}
 
 /* ==================
     hero area
 ===================== */
 
 .hero {
-    display: grid;
-    grid-template-columns: 
-    minmax(1em, 2em) minmax(0, 500px) minmax(1em, 2em);
-
     background-image: url(img/adventure.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -107,4 +107,20 @@ p {
 .logo,
 .footer-logo {
     max-width: 200px;
+}
+
+/* ==================
+    Info Section
+===================== */
+
+
+
+/* ==================
+    Layout
+===================== */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 
+    minmax(1em, 2em) minmax(0, 500px) minmax(1em, 2em);
 }
