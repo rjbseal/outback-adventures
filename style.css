@@ -153,6 +153,7 @@ p {
     display: grid;
     grid-template-columns: 
     minmax(1em, 2em) minmax(0, 500px) minmax(1em, 2em);
+    column-gap: 2em;
 }
 
 @media (min-width: 600px) {
@@ -165,8 +166,13 @@ p {
 
 .footer {
     padding: 4em 0;
+    opacity: 0.7;
     text-align: center;
     background: #ebebeb;
+    grid-template-areas: 
+        ". social ."
+        ". main .";
+
 }
 
 .footer-main,
@@ -174,11 +180,18 @@ p {
     grid-column: 2 / -2;
 }
 
+.footer-main {
+    font-size: 0.85rem;
+    grid-area: main;
+}
+
 .social-list {
+    grid-area: social;
     list-style: none;
     display: flex;
     justify-content: center;
     padding: 0;
+    margin: 0 0 2em;
 }
 
 .social-item {
@@ -193,4 +206,15 @@ p {
 
 .social-link {
     color: #333;
+}
+
+@media(min-width: 600px) {
+    .footer {
+        grid-template-areas: 
+            ". main main social .";
+    }
+
+    .footer-main {
+        text-align: left;
+    }
 }
