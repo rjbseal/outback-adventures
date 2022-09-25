@@ -69,18 +69,46 @@ p {
 
 .header {
     width: 100%;
+    background: black;
 }
 .header-content {
     display: flex;
     align-items: center;
+    grid-column: 2 / -2;
     background: transparent;
-    position: fixed;
+    /* position: fixed; */
     
+}
+
+.logo-link {
+    background: #fff;
+    padding-top: 2em;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    z-index: 1;
+}
+
+.navigation-open {
+    transform: translateX(-100%);
 }
 
 .nav-list {
     list-style: none;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 .nav-item {
@@ -89,9 +117,34 @@ p {
 
 .nav-link {
     text-decoration: none;
-    color: var(--sinopia);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
 }
 
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--accent-color);
+}
+
+.close-nav {
+    position: absolute;
+    border: 0;
+    background: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: .5em;
+    cursor: pointer;
+}
+
+.open-nav {
+    margin-left: auto;
+    background: 0;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
 /* ==================
     hero area
@@ -172,12 +225,6 @@ p {
     grid-template-areas: 
         ". social ."
         ". main .";
-
-}
-
-.footer-main,
-.social-list {
-    grid-column: 2 / -2;
 }
 
 .footer-main {
