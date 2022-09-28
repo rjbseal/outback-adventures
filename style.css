@@ -69,20 +69,16 @@ p {
 
 .header {
     width: 100%;
-    background: black;
+    position: fixed;
+    padding-top: 1em;
 }
+
 .header-content {
     display: flex;
     align-items: center;
     grid-column: 2 / -2;
     background: transparent;
-    /* position: fixed; */
     
-}
-
-.logo-link {
-    background: #fff;
-    padding-top: 2em;
 }
 
 .nav {
@@ -118,13 +114,12 @@ p {
 .nav-link {
     text-decoration: none;
     font-size: 2rem;
-    font-weight: 700;
     color: #fff;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--accent-color);
+    color: var(--sinopia);
 }
 
 .close-nav {
@@ -144,6 +139,31 @@ p {
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
+    border: 0;
+}
+
+@media (min-width: 600px) {
+
+    .open-nav,
+    .close-nav {
+        display: none;
+    }
+
+    .nav {
+        position: initial;
+        background: 0;
+    }
+    
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 2em;
+    }
+
+    .nav-link {
+        color: #033051;
+        font-size: 1.25rem;
+    }
 }
 
 /* ==================
